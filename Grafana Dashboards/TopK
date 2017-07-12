@@ -1,0 +1,704 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": 10,
+  "links": [],
+  "refresh": "5s",
+  "rows": [
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "OpenTSDB",
+          "fill": 1,
+          "id": 1,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": true,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_serverId",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "explicitTags": false,
+              "filters": [
+                {
+                  "filter": "$TopKDomains",
+                  "groupBy": false,
+                  "tagk": "domain",
+                  "type": "iliteral_or"
+                },
+                {
+                  "filter": "$ServersDomain",
+                  "groupBy": true,
+                  "tagk": "serverId",
+                  "type": "literal_or"
+                }
+              ],
+              "hide": false,
+              "metric": "Domains",
+              "refId": "A"
+            },
+            {
+              "aggregator": "sum",
+              "alias": "Selected Servers Sum",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "$TopKDomains",
+                  "groupBy": false,
+                  "tagk": "domain",
+                  "type": "iliteral_or"
+                },
+                {
+                  "filter": "$ServersDomain",
+                  "groupBy": false,
+                  "tagk": "serverId",
+                  "type": "iliteral_or"
+                }
+              ],
+              "hide": false,
+              "metric": "Domains",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TopKDomains",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "TopKDomains",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "OpenTSDB",
+          "fill": 1,
+          "id": 2,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": true,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_serverId",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "$CustomDomain",
+                  "groupBy": false,
+                  "tagk": "domain",
+                  "type": "iliteral_or"
+                },
+                {
+                  "filter": "$ServersDomain",
+                  "groupBy": true,
+                  "tagk": "serverId",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "Domains",
+              "refId": "A"
+            },
+            {
+              "aggregator": "sum",
+              "alias": "Selected Servers Sum",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "$ServersDomain",
+                  "groupBy": false,
+                  "tagk": "serverId",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$CustomDomain",
+                  "groupBy": false,
+                  "tagk": "domain",
+                  "type": "iliteral_or"
+                }
+              ],
+              "metric": "Domains",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Custom Domain",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "CustomDomain",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "OpenTSDB",
+          "fill": 1,
+          "id": 3,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": true,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_serverId",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "disableDownsampling": false,
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "$TopKClients",
+                  "groupBy": false,
+                  "tagk": "client",
+                  "type": "iliteral_or"
+                },
+                {
+                  "filter": "$ServersClient",
+                  "groupBy": true,
+                  "tagk": "serverId",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "Clients",
+              "refId": "A"
+            },
+            {
+              "aggregator": "sum",
+              "alias": "Selected Servers Sum",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "$TopKClients",
+                  "groupBy": false,
+                  "tagk": "client",
+                  "type": "iliteral_or"
+                },
+                {
+                  "filter": "$ServersClient",
+                  "groupBy": false,
+                  "tagk": "serverId",
+                  "type": "literal_or"
+                }
+              ],
+              "hide": false,
+              "metric": "Clients",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TopKClients",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "TopKClients",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "OpenTSDB",
+          "fill": 1,
+          "id": 4,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": true,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "aggregator": "sum",
+              "alias": "$tag_serverId",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "$ServersClient",
+                  "groupBy": true,
+                  "tagk": "serverId",
+                  "type": "literal_or"
+                },
+                {
+                  "filter": "$CustomClient",
+                  "groupBy": false,
+                  "tagk": "client",
+                  "type": "iliteral_or"
+                }
+              ],
+              "hide": false,
+              "metric": "Clients",
+              "refId": "A"
+            },
+            {
+              "aggregator": "sum",
+              "alias": "Selected Servers Sum",
+              "currentFilterGroupBy": false,
+              "currentFilterKey": "",
+              "currentFilterType": "literal_or",
+              "currentFilterValue": "",
+              "downsampleAggregator": "avg",
+              "downsampleFillPolicy": "none",
+              "filters": [
+                {
+                  "filter": "$CustomClient",
+                  "groupBy": false,
+                  "tagk": "client",
+                  "type": "iliteral_or"
+                },
+                {
+                  "filter": "$ServersClient",
+                  "groupBy": false,
+                  "tagk": "serverId",
+                  "type": "literal_or"
+                }
+              ],
+              "metric": "Clients",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Custom Client",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "CustomClient",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "text": "ns2.hostinglemaison.cl.",
+          "value": "ns2.hostinglemaison.cl."
+        },
+        "datasource": "OpenTSDB",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": true,
+        "name": "TopKDomains",
+        "options": [],
+        "query": "tag_values(TopKDomains, domain)",
+        "refresh": 2,
+        "regex": "",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "hi4.himail.cl.",
+          "value": "hi4.himail.cl."
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "CustomDomain",
+        "options": [
+          {
+            "selected": true,
+            "text": "nic.cl.",
+            "value": "nic.cl."
+          }
+        ],
+        "query": "nic.cl.",
+        "type": "custom"
+      },
+      {
+        "allValue": "",
+        "current": {
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "OpenTSDB",
+        "hide": 0,
+        "includeAll": true,
+        "label": null,
+        "multi": true,
+        "name": "ServersDomain",
+        "options": [],
+        "query": "tag_values(Domains, serverId)",
+        "refresh": 2,
+        "regex": "",
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "190.160.0.52",
+          "value": "190.160.0.52"
+        },
+        "datasource": "OpenTSDB",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": true,
+        "name": "TopKClients",
+        "options": [],
+        "query": "tag_values(TopKClients, client)",
+        "refresh": 2,
+        "regex": "",
+        "sort": 3,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "200.28.4.130",
+          "value": "200.28.4.130"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "CustomClient",
+        "options": [
+          {
+            "selected": true,
+            "text": "1.1.1.1",
+            "value": "1.1.1.1"
+          }
+        ],
+        "query": "1.1.1.1",
+        "type": "custom"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "OpenTSDB",
+        "hide": 0,
+        "includeAll": true,
+        "label": null,
+        "multi": true,
+        "name": "ServersClient",
+        "options": [],
+        "query": "tag_values(Clients, serverId)",
+        "refresh": 2,
+        "regex": "",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "3s",
+      "5s",
+      "10s",
+      "30s",
+      "1m"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "TopKDashboard",
+  "version": 1
+}

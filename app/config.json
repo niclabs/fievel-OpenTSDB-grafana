@@ -1,0 +1,27 @@
+{
+  "redis": {
+    "address": "localhost",
+    "port": "6379"
+  },
+  "openTSDB": {
+    "address": "localhost",
+    "port": "4242",
+    "path":"/home/cate/OpenTSDB/opentsdb/build/tsdb"
+  },
+  "kDomainsToStore": 20,
+  "kIpsToStore": 20,
+  "topKDomainsQuery": {
+    "start": "5m",
+    "end": "1m",
+    "subsample": "4m",
+    "k": 5
+  },
+  "topKClientsQuery": {
+    "start": "5m",
+    "end": "1m",
+    "subsample": "4m",
+    "k": 7
+  },
+  "topQueryTimeout": 3,
+  "topListsRefreshingTime" : 60
+}

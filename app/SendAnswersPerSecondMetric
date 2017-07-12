@@ -1,0 +1,5 @@
+#!/bin/sh
+cat <<EOF | curl --data-binary @- localhost:9091/metrics/job/fievel/server_name/$1
+# TYPE fievel_answers_per_second counter
+fievel_answers_per_second $2 $3
+EOF
