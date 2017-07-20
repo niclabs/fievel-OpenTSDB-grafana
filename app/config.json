@@ -6,7 +6,7 @@
   "openTSDB": {
     "address": "localhost",
     "port": "4242",
-    "path":"/home/cate/OpenTSDB/opentsdb/build/tsdb"
+    "path":"<insert-path>/opentsdb/build/tsdb"
   },
   "kDomainsToStore": 20,
   "kIpsToStore": 20,
